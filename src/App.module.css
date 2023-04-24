@@ -1,72 +1,25 @@
-.container {
+ .container {
     height:100vh;
     width:100vw;
     display: flex;
-    flex-direction: column;
-    
-  
-
-}
-
-form {
-    display: flex;
     justify-content: center;
-    margin-top:5rem;
-    /* align-items: center; */
-}
-
-.name {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-input {
-    height: 3rem;
-    width:20rem;
-    font-size: 1.5rem;
+    gap:2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
 }
 
 .btn {
+    height:2rem;
+    width:5rem;
     background-color: blueviolet;
-    border: transparent;
     color: white;
     font-weight: bold;
-    cursor: pointer;
-}
-.content {
-    display: flex;
-    flex-direction: row;
-    gap:1rem;
-    justify-content: center;
-    border: 2px solid red;
-    height: 3rem;
-    width:22rem;
-    align-items: center;
-}
-
-ul {
-    display: flex;
-    justify-content: center;
-    gap:1rem;
-    align-items: center;
-    flex-direction: column;
-    margin:2rem;
-    font-size: 1.5rem;
-   
-    /* border: 2px solid green; */
-    /* font-size: 2rem; */
-
-}
-
-.addBtn {
-    background-color: blueviolet;
     border: transparent;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    padding:0.5rem;
     border-radius: 5px;
-
+    cursor: pointer;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 4rem;
+}

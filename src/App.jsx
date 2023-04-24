@@ -1,58 +1,27 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, removeTodo,toggleComplete } from './Features/Todo/TodoSlice';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from './Features/Todo/counter';
 import style from './App.module.css';
 
-
-function App() {
-  const [text, setText] = useState('');
-  const todos = useSelector((state) => state.todos);
+export  default function App() {
+  const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(addTodo(text));
-    setText('');
-  };
-
-  const handleRemove = (id) => {
-    dispatch(removeTodo(id));
-  };
-  const handleToggleComplete = (id) => {
-    dispatch(toggleComplete(id));
-  };
-
+  
   return (
+    <div>
+    <h2>Counter</h2>
     <div className={style.container}>
-      <div className={style.name}>
-        <h2>Todo Application</h2>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <input value={text} onChange={(e) => setText(e.target.value)} />
-        <button className={style.btn}>Add Todo</button>
-      </form>
-      <ul>
-        {todos.map((todo) => (
-          <>
-          <li className={style.content}>
-            <p key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-              {todo.text}
-            </p>
-           <div>
-            <button onClick={()=>handleToggleComplete(todo.id)} className={style.addBtn}>
-              completed
-            </button>
-            </div>
-            <div>
-            <button onClick={() => handleRemove(todo.id)} className={style.addBtn}>Remove</button>
-            </div>
-            </li>
+    <button aria-label="Decrement value" onClick={() => dispatch(decrement())} className={style.btn}>
+        Decrement
+      </button>
+      <span>{count}</span>
+      <button aria-label="Increment value" onClick={() => dispatch(increment())} className={style.btn}>
+        Increment
+      </button>
+      
+      
 
-          </>
-        ))}
-      </ul>
     </div>
-  );
+    </div>
+  )
 }
-
-export default App;
