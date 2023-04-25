@@ -27,7 +27,7 @@ const todosSlice = createSlice({
       }
     },
   },
-});
+}); 
 
 export const { addTodo, removeTodo, toggleComplete } = todosSlice.actions;
 
