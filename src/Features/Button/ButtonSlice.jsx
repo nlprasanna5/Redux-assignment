@@ -8,7 +8,12 @@ const buttonsSlice = createSlice({
   reducers: {
     updateClickCount: (state, action) => {
       const { buttonName } = action.payload;
-      state[buttonName] = (state[buttonName] || 0) + 1;
+      // state[buttonName] = (state[buttonName] || 0) + 1;
+      if (!state[buttonName]) {
+        state[buttonName] = 1;
+      } else {
+        state[buttonName] += 1;
+      }
     },
   },
 });

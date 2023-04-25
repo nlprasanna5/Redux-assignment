@@ -1,72 +1,56 @@
+body {
+    font-size: 2rem;
+}
+
 .container {
-    height:100vh;
-    width:100vw;
     display: flex;
+    width:98vw;
+    justify-content: center;
     flex-direction: column;
+    gap:2rem;
     
-  
-
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    margin-top:5rem;
-    /* align-items: center; */
-}
-
-.name {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-input {
-    height: 3rem;
-    width:20rem;
-    font-size: 1.5rem;
-}
-
-.btn {
-    background-color: blueviolet;
-    border: transparent;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-.content {
+.charContainer {
     display: flex;
     flex-direction: row;
-    gap:1rem;
     justify-content: center;
-    border: 2px solid red;
-    height: 3rem;
-    width:22rem;
-    align-items: center;
+    gap:0.5rem;
+
 }
 
-ul {
+
+
+button {
+    padding:0.3rem;
+    font-size: 1.2rem;
+}
+
+table,tr,td,th {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+    width:40vw;
+   
+}
+
+.tableContainer {
     display: flex;
     justify-content: center;
-    gap:1rem;
-    align-items: center;
-    flex-direction: column;
-    margin:2rem;
-    font-size: 1.5rem;
-   
-    /* border: 2px solid green; */
-    /* font-size: 2rem; */
 
 }
 
-.addBtn {
+h2 {
+    text-align: center;
+}
+
+button {
     background-color: blueviolet;
-    border: transparent;
     color: white;
     font-weight: bold;
-    cursor: pointer;
-    padding:0.5rem;
-    border-radius: 5px;
-
+    border: transparent;
+    padding:1rem;
 }
-
