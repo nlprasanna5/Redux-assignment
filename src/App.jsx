@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from './Features/Todo/counter';
+import { decrement, increment, reset } from './Features/Todo/counter';
 import style from './App.module.css';
 
 export  default function App() {
@@ -17,6 +17,9 @@ export  default function App() {
       <span>{count}</span>
       <button aria-label="Increment value" onClick={() => dispatch(increment())} className={style.btn}>
         Increment
+      </button>
+      <button aria-label="Increment value" onClick={() => dispatch(reset())} className={style.btn}>
+        Reset
       </button>
       
       
