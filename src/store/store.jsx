@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import todosReducer from './todosSlice';
-import todosReducer from '../Features/Todo/TodoSlice'
+// import buttonsReducer from './buttonsSlice';
+import buttonsReducer from '../Features/Button/ButtonSlice'
 
 const store = configureStore({
   reducer: {
-    todos: todosReducer
+    buttons: buttonsReducer,
   },
 });
 
